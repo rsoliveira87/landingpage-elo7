@@ -4,6 +4,14 @@
     padding: 0;
 }
 
+body {
+    color: $gray;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 960px;
+}
+
 a,
 a:hover,
 a:visited {
@@ -11,8 +19,16 @@ a:visited {
     text-decoration: none;
 }
 
+a {
+    color: $green;
+}
+
 .text-center {
     text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
 }
 
 .container {
@@ -30,4 +46,38 @@ a:visited {
 
 .hidden {
     display: none;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+.img-responsive {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.landing-page-section {
+    padding: 0 50px;
+
+    &.gray {
+        background: $light-gray;
+    }
+}
+
+.separator {
+    background: $gray;
+    content: "";
+    display: block;
+    height: 2px;
+    margin: 30px auto;
+    width: 200px;
 }

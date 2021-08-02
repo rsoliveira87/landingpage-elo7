@@ -1,0 +1,20 @@
+.landing-page-team {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 50px;
+
+    &-title {
+        max-width: 230px;
+        padding-bottom: 55px;
+    }
+
+    &-items {
+        flex-direction: row;
+        margin: 0 -5px;      
+    }
+    
+    &-item {
+        margin: 0 5px;
+    }
+}

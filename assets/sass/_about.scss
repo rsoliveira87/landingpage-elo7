@@ -1,0 +1,30 @@
+.landing-page-about {
+    padding: 50px 0;
+
+    .column {
+        width: 400px;
+
+        &.first {
+            margin-right: 50px;
+        }
+    }
+
+    &-name,
+    &-title {
+        font-size: 18px;
+    }
+
+    &-title {
+        color: $dark-gray;
+        margin-bottom: 15px;
+    }
+
+    &-name {
+        color: $yellow;
+        margin-bottom: 45px;
+    }
+
+    &-text {
+        line-height: 1.4;
+    }
+}
