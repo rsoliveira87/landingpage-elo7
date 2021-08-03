@@ -1,12 +1,8 @@
 .landing-page-about {
     padding: 50px 0;
 
-    .column {
-        width: 400px;
-
-        &.first {
-            margin-right: 50px;
-        }
+    &-item {
+        flex: 1;
     }
 
     &-name,
@@ -26,5 +22,29 @@
 
     &-text {
         line-height: 1.4;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing-page-about {
+
+        &-items {
+            flex-direction: column;
+        }
+
+        &-title {
+            margin-top: 15px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .landing-page-about {
+        &-item {
+    
+            &.first {
+                margin-right: 50px;
+            }
+        }
     }
 }

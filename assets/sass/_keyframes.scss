@@ -1,0 +1,15 @@
+@-webkit-keyframes rotate{
+    to{
+        @include my-property(transform, rotate(360deg));
+    }
+}
+@-o-keyframes rotate{
+    to{
+        @include my-property(transform, rotate(360deg));
+    }
+}
+@keyframes rotate{
+    to{
+        @include my-property(transform, rotate(360deg));
+    }
+}

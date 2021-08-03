@@ -1,0 +1,62 @@
+.landing-page-jobs {
+    padding-bottom: 65px;
+
+    &-title {
+        font-size: 18px;
+        margin-bottom: 70px;
+    }
+
+    &-subtitle {
+        margin-bottom: 60px;
+    }
+    
+    &-item {
+
+        &:not(:last-child) {
+            margin-bottom: 28px;
+        }
+    }
+
+    &-load,
+    &-load-svg {
+        width: 70px;
+    }
+
+    &-load {
+        margin: 0 auto;
+
+        &-svg {
+            height: 70px;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+            @include my-property(animation, rotate 1s linear infinite);
+
+            path {
+                fill: $dark-gray;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .landing-page-jobs {
+
+        &-item {
+            flex-direction: column;
+        }
+
+        &-link {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .landing-page-jobs {
+
+        &-item {
+            justify-content: space-between;
+        }
+    }
+}

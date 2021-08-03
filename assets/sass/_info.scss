@@ -1,0 +1,60 @@
+.landing-page-info {
+    padding: 60px 0 55px;
+
+    .icons {
+        background: url(../img/sprites/sprite.png);
+        display: block;
+        height: 150px;
+        margin: 0 auto;
+        width: 150px;
+        
+        &.icon-atividades {
+            background-position: 0px 0px;
+        }
+        &.icon-descontracao {
+            background-position: -150px 0px;
+        }
+        &.icon-qualidade {
+            background-position: 0px -150px;
+        }
+    }
+
+    &-title {
+        font-size: 18px;
+        margin: 35px 0 45px;
+    }
+
+    &-text {
+        color: $dark-gray;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing-page-info {
+
+        &-items {
+            flex-wrap: wrap;
+        }
+
+        &-item {
+
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .landing-page-info {
+
+        &-items {
+            margin: 0 -12px;
+        }
+    
+        &-item {
+            margin: 0 12px;
+        }
+    }
+}

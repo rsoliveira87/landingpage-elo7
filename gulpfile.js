@@ -5,7 +5,8 @@ const gulp = require('gulp'),
 	rename = require('gulp-rename'),
 	uglify = require('gulp-uglify'),
     pump = require('pump'),
-	babel = require('gulp-babel');
+	babel = require('gulp-babel'),
+	spritesmith = require('gulp.spritesmith');
 
 const scssFile = 'assets/sass/**/*.scss';
 
@@ -51,6 +52,17 @@ gulp.task('jsProd', cb => {
 		gulp.dest(jsDest)
 	], cb);
 
+});
+
+gulp.task('generateSprite', () => {
+
+	const spriteData = gulp.src('assets/img/icons/*.png')
+						.pipe(spritesmith({
+							imgName : 'sprite.png',
+							cssName : 'sprite.css'
+						}));
+	spriteData.img.pipe(gulp.dest('assets/img/sprites/'));
+	spriteData.css.pipe(gulp.dest('assets/css/'));
 });
 
 gulp.task('watch', () => {

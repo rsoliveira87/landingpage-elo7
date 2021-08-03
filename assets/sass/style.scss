@@ -1,8 +1,29 @@
+/**
+ * Sections
+ * 1.0 - Section Header
+ * 2.0 - Section Welcome
+ * 3.0 - Section About
+ * 4.0 - Section Team
+ * 5.0 - Section Info
+ * 6.0 - Section Image Full
+ * 7.0 - Section Jobs
+*/
 @import 'variables';
-@import 'mixins';
 @import 'default';
+@import 'mixins';
+@import 'keyframes';
+@import 'fontface';
+/* 1.0 - Section Header */
 @import 'header';
+/* 2.0 - Section Welcome */
 @import 'welcome';
+/* 3.0 - Section About */
 @import 'about';
+/* 4.0 - Section Team */
 @import 'team';
+/* 5.0 - Section Info */
 @import 'info';
+/* 6.0 - Section Image Full */
+@import 'image-full';
+/* 7.0 - Section Jobs */
+@import 'jobs';

@@ -10,11 +10,35 @@
     }
 
     &-items {
-        flex-direction: row;
         margin: 0 -5px;      
     }
     
     &-item {
         margin: 0 5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing-page-team {
+
+        &-items {
+            flex-direction: column;
+        }
+
+        &-item {
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .landing-page-team {
+
+        &-items {
+            flex-direction: row;
+        }
     }
 }
