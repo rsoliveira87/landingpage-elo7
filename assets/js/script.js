@@ -25,7 +25,7 @@ class LandingPageElo7 {
      * @return {Promise}
      */
     getApiData() {
-        const urlApi = 'http://www.mocky.io/v2/5d6fb6b1310000f89166087b';
+        const urlApi = `${window.location.protocol === 'https:' ? window.location.protocol : 'http:'}//www.mocky.io/v2/5d6fb6b1310000f89166087b`;
         return new Promise(resolve => {
             fetch(urlApi)
                 .then(json => json.json())
