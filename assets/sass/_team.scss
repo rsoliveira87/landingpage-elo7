@@ -8,13 +8,11 @@
         max-width: 230px;
         padding-bottom: 55px;
     }
-
-    &-items {
-        margin: 0 -5px;      
-    }
     
     &-item {
-        margin: 0 5px;
+        &:not(:first-child) {
+            margin-left: 10px;
+        }
     }
 }
 

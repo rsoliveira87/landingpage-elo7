@@ -14,7 +14,7 @@ class LandingPageElo7 {
                 const filterJobs = this.getFilterJobsActive(response.vagas);
                 const markup = this.getMarkup(filterJobs);
                 this.setMarkup(markup);
-            });
+            }).catch(error => console.error(error));
     }
 
     /**
@@ -26,11 +26,8 @@ class LandingPageElo7 {
      */
     getApiData() {
         const urlApi = `${window.location.protocol === 'https:' ? window.location.protocol : 'http:'}//www.mocky.io/v2/5d6fb6b1310000f89166087b`;
-        return new Promise(resolve => {
-            fetch(urlApi)
-                .then(json => json.json())
-                .then(response => resolve(response));
-        });
+        return fetch(urlApi)
+            .then(json => json.json());
     }
     
     /**
@@ -54,13 +51,11 @@ class LandingPageElo7 {
      * @return {String} markup - markup montado para inserir na página
      */
     getMarkup(jobs) {
-        let markup = '';
-
-        jobs.map(job => {
+        const tratedJobs = jobs.map(job => {
             const location = job.localizacao
                 ? `${job.localizacao.bairro} - ${job.localizacao.cidade}, ${job.localizacao.pais}`
                 : 'Remoto';
-            markup += `
+            return `
                 <div class="landing-page-jobs-item flex">
                     <a href="${job.link}" class="landing-page-jobs-link font-bold" title="${job.cargo}">${job.cargo}</a>
                     <span class="landing-page-jobs-location font-bold">${location}</span>
@@ -68,7 +63,7 @@ class LandingPageElo7 {
             `;
         });
 
-        return markup;
+        return tratedJobs.join('');
     }
 
     /**

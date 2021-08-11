@@ -1,5 +1,6 @@
 .landing-page-info {
-    padding: 60px 0 55px;
+    padding-bottom: 55px;
+    padding-top: 60px;
 
     .icons {
         background: url(../img/sprites/sprite.png);
@@ -47,14 +48,11 @@
 }
 
 @media (min-width: 768px) {
-    .landing-page-info {
-
-        &-items {
-            margin: 0 -12px;
-        }
-    
+    .landing-page-info {    
         &-item {
-            margin: 0 12px;
+            &:not(:first-child) {
+                margin-left: 24px;
+            }
         }
     }
 }
